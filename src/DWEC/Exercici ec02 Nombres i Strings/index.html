@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <label for="text">Inserta el texto</label>
+      <input id="text" type="text" />
+    </header>
+    <main>
+      <div>
+        <button onclick="stringBuit()">01 String Buit</button>
+        <button onclick="invertirString()">02 Invertir String</button>
+        <button onclick="">03 Quantes a</button>
+        <button onclick="">04 Abans a</button>
+        <button onclick="">05 Primera i darrera a</button>
+        <button onclick="esborraSubstring()">06 Esborra Substring</button>
+        <button onclick="">07 Sustitueix Substring</button>
+        <button onclick="">08 Cap i cua</button>
+        <button onclick="noEspais()">09 No Espais</button>
+        <button onclick="">10 Frase amb guions</button>
+        <button onclick="">11 Acronim</button>
+        <button onclick="">12 Email</button>
+        <button onclick="">13 Numero signe</button>
+        <button onclick="">14 Es numero</button>
+        <button onclick="">15 Numero part entera</button>
+        <button onclick="">16 Numero part decimal</button>
+        <button onclick="">17 xx_amb 3 decimals</button>
+      </div>
+      <div>
+        <span id="result"></span>
+      </div>
+    </main>
+    <script>
+      function stringBuit() {
+        let var1 = document.getElementById("text").value;
+        if (var1.length == 0)
+          document.getElementById("result").innerHTML = "Es buit";
+        else document.getElementById("result").innerHTML = "No es buit";
+      }
+      function invertirString() {
+        let var1 = document.getElementById("text").value;
+        let result = String(var1.split("").reverse().join(""));
+        document.getElementById("result").innerHTML = result;
+      }
+      function quantesA() {
+        let var1 = document.getElementById("text").value;
+
+      }
+      function abansA() {
+        let var1 = document.getElementById("text").value;
+      }
+      function esborraSubstring() {
+        let var1 = document.getElementById("text").value;
+        let result = var1.slice("la");
+        document.getElementById("result").innerHTML = result;
+      }
+      function noEspais() {
+        let var1 = document.getElementById("text").value;
+        let result = var1.replace(/ /i,"");
+        document.getElementById("result").innerHTML = result; 
+      }
+    </script>
+  </body>
+</html>

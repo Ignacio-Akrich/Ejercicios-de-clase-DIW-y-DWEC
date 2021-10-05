@@ -1,0 +1,46 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgrey;
+}
+
+header { 
+    margin-top: 20px;   
+    background-color: #9acd32;
+}
+
+header img {
+    position: relative;
+    display: inline-flex;
+    top: 40px;
+    margin-left: 40px;
+   
+}
+
+ul#menu {
+    display: inline-flex;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+ul#menu li {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+    list-style: none;    
+}
+
+div {
+    /* indica el valor de la propietat position i més propietats, si fan falta */
+
+    border: 1px solid green;
+}
+
+div>h1 {
+    /* indica el valor de la propietat position i més propietats, si fan falta */
+
+    color: white;
+    font-size: 2em;
+}
