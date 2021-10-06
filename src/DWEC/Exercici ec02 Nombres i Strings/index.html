@@ -38,7 +38,7 @@
 <script>
     function stringBuit() {
         let var1 = document.getElementById("text").value;
-        if (var1.length == 0)
+        if (var1.length === 0)
             document.getElementById("result").innerHTML = "Es buit";
         else document.getElementById("result").innerHTML = "No es buit";
     }
@@ -65,7 +65,7 @@
     // No funciona correctamente
     function esborraSubstring() {
         let var1 = document.getElementById("text").value;
-        let result = var1.slice("la");
+        let result = var1.subst;
         document.getElementById("result").innerHTML = result;
     }
 
