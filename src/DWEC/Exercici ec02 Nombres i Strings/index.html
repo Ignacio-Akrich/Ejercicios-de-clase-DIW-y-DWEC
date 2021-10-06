@@ -1,69 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <label for="text">Inserta el texto</label>
-      <input id="text" type="text" />
-    </header>
-    <main>
-      <div>
+</head>
+<body>
+<header>
+    <label for="text">Inserta el texto</label>
+    <input id="text" type="text"/>
+</header>
+<main>
+    <div>
         <button onclick="stringBuit()">01 String Buit</button>
         <button onclick="invertirString()">02 Invertir String</button>
-        <button onclick="">03 Quantes a</button>
-        <button onclick="">04 Abans a</button>
-        <button onclick="">05 Primera i darrera a</button>
+        <button onclick="quantesA()">03 Quantes a</button>
+        <button onclick="abansA()">04 Abans a</button>
+        <button onclick="primeraDarreraA()">05 Primera i darrera a</button>
         <button onclick="esborraSubstring()">06 Esborra Substring</button>
-        <button onclick="">07 Sustitueix Substring</button>
-        <button onclick="">08 Cap i cua</button>
+        <button onclick="sustitueixSubstring()">07 Sustitueix Substring</button>
+        <button onclick="capCua()">08 Cap i cua</button>
         <button onclick="noEspais()">09 No Espais</button>
-        <button onclick="">10 Frase amb guions</button>
-        <button onclick="">11 Acronim</button>
-        <button onclick="">12 Email</button>
-        <button onclick="">13 Numero signe</button>
-        <button onclick="">14 Es numero</button>
-        <button onclick="">15 Numero part entera</button>
-        <button onclick="">16 Numero part decimal</button>
-        <button onclick="">17 xx_amb 3 decimals</button>
-      </div>
-      <div>
+        <button onclick="fraseAmbGuion()">10 Frase amb guions</button>
+        <button onclick="acronim()">11 Acronim</button>
+        <button onclick="email()">12 Email</button>
+        <button onclick="numeroSigne()">13 Numero signe</button>
+        <button onclick="esNumero()">14 Es numero</button>
+        <button onclick="numeroPartEntera()">15 Numero part entera</button>
+        <button onclick="numeroPartDecimal()">16 Numero part decimal</button>
+        <button onclick="amb3Desimals()">17 xx_amb 3 decimals</button>
+    </div>
+    <div>
         <span id="result"></span>
-      </div>
-    </main>
-    <script>
-      function stringBuit() {
+    </div>
+</main>
+<script>
+    function stringBuit() {
         let var1 = document.getElementById("text").value;
         if (var1.length == 0)
-          document.getElementById("result").innerHTML = "Es buit";
+            document.getElementById("result").innerHTML = "Es buit";
         else document.getElementById("result").innerHTML = "No es buit";
-      }
-      function invertirString() {
+    }
+
+    function invertirString() {
         let var1 = document.getElementById("text").value;
         let result = String(var1.split("").reverse().join(""));
         document.getElementById("result").innerHTML = result;
-      }
-      function quantesA() {
+    }
+
+    function quantesA() {
         let var1 = document.getElementById("text").value;
 
-      }
-      function abansA() {
+    }
+
+    function abansA() {
         let var1 = document.getElementById("text").value;
-      }
-      function esborraSubstring() {
+    }
+
+    function primeraDarreraA() {
+        let var1 = document.getElementById("text").value;
+    }
+
+    // No funciona correctamente
+    function esborraSubstring() {
         let var1 = document.getElementById("text").value;
         let result = var1.slice("la");
         document.getElementById("result").innerHTML = result;
-      }
-      function noEspais() {
+    }
+
+    function sustitueixSubstring() {
         let var1 = document.getElementById("text").value;
-        let result = var1.replace(/ /i,"");
-        document.getElementById("result").innerHTML = result; 
-      }
-    </script>
-  </body>
+    }
+
+    function capCua() {
+        let var1 = document.getElementById("text").value;
+    }
+
+    function noEspais() {
+        let var1 = document.getElementById("text").value;
+        let result = var1.replace(/ /i, "");
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function fraseAmbGuion() {
+        let var1 = document.getElementById("text").value;
+        let result = var1.replace(/ /g, "-");
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function acronim() {
+        let var1 = document.getElementById("text").value;
+    }
+
+    function email() {
+        let var1 = document.getElementById("text").value;
+    }
+
+    function numeroSigne() {
+        let var1 = parseInt(document.getElementById("text").value);
+        if (var1 > 0)
+            document.getElementById("result").innerHTML = "El numero es positiu";
+        else if (var1 < 0)
+            document.getElementById("result").innerHTML = "El numero es negatiu";
+        else if(var1 === 0)
+            document.getElementById("result").innerHTML = "El numero es igual a cero";
+        else
+            document.getElementById("result").innerHTML = "No es un numero";
+    }
+
+    function esNumero() {
+        let var1 = parseInt(document.getElementById("text").value);
+        if (0 > var1 < 0 || var1===0)
+            document.getElementById("result").innerHTML = "Es un numero";
+        else
+            document.getElementById("result").innerHTML = "No es un numero";
+    }
+
+    function numeroPartEntera() {
+        let var1 = document.getElementById("text").value;
+        let result = Math.trunc(var1);
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function numeroPartDecimal() {
+        let var1 = document.getElementById("text").value;
+        let dec = var1 - Math.floor(var1);
+        let result = Number(String(dec).split(".")[1]);
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function amb3Desimals() {
+        let var1 = document.getElementById("text").value;
+        let div = var1 / 19 ;
+        let result = Number(div.toFixed(3));
+        document.getElementById("result").innerHTML = result;
+    }
+
+</script>
+</body>
 </html>
