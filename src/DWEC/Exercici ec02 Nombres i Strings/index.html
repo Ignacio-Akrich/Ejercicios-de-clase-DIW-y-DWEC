@@ -51,26 +51,38 @@
 
     function quantesA() {
         let var1 = document.getElementById("text").value;
-
+        let array = var1.split("");
+        var result = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === "a")
+                result += 1;
+        }
+        document.getElementById("result").innerHTML = result;
     }
 
     function abansA() {
         let var1 = document.getElementById("text").value;
-    }
+        let result = var1.substring(0,var1.indexOf("a"));
+        document.getElementById("result").innerHTML = result;
+       }
 
     function primeraDarreraA() {
         let var1 = document.getElementById("text").value;
+        let result1 = var1.indexOf("a") +1;
+        let result2 = var1.lastIndexOf("a")+1;
+        document.getElementById("result").innerHTML = `La primera a se encuentra en ${result1}º posicion y la ultima a se encuentra en ${result2}º posicion `;
     }
 
-    // No funciona correctamente
     function esborraSubstring() {
         let var1 = document.getElementById("text").value;
-        let result = var1.subst;
+        let result = var1.replaceAll("la", "");
         document.getElementById("result").innerHTML = result;
     }
 
     function sustitueixSubstring() {
         let var1 = document.getElementById("text").value;
+        let result = var1.replaceAll("la", "*");
+        document.getElementById("result").innerHTML = result;
     }
 
     function capCua() {
@@ -79,13 +91,13 @@
 
     function noEspais() {
         let var1 = document.getElementById("text").value;
-        let result = var1.replace(/ /i, "");
+        let result = var1.replaceAll(" ", "");
         document.getElementById("result").innerHTML = result;
     }
 
     function fraseAmbGuion() {
         let var1 = document.getElementById("text").value;
-        let result = var1.replace(/ /g, "-");
+        let result = var1.replaceAll(" ", "-");
         document.getElementById("result").innerHTML = result;
     }
 
@@ -103,7 +115,7 @@
             document.getElementById("result").innerHTML = "El numero es positiu";
         else if (var1 < 0)
             document.getElementById("result").innerHTML = "El numero es negatiu";
-        else if(var1 === 0)
+        else if (var1 === 0)
             document.getElementById("result").innerHTML = "El numero es igual a cero";
         else
             document.getElementById("result").innerHTML = "No es un numero";
@@ -111,7 +123,7 @@
 
     function esNumero() {
         let var1 = parseInt(document.getElementById("text").value);
-        if (0 > var1 < 0 || var1===0)
+        if (0 > var1 < 0 || var1 === 0)
             document.getElementById("result").innerHTML = "Es un numero";
         else
             document.getElementById("result").innerHTML = "No es un numero";
@@ -132,7 +144,7 @@
 
     function amb3Desimals() {
         let var1 = document.getElementById("text").value;
-        let div = var1 / 19 ;
+        let div = var1 / 19;
         let result = Number(div.toFixed(3));
         document.getElementById("result").innerHTML = result;
     }

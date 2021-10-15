@@ -1,0 +1,149 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+h4 {
+  font-size: 28px;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+.container {
+  background-color: black;
+  width: 450px;
+  height: 300px;
+  margin: 20px 2px;
+}
+
+.container div {
+  color: white;
+  background-color: blue;
+  font-size: 25px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  margin: 10px;
+  padding: 20px 30px;
+}
+
+/**
+CONTAINER C01
+**/
+.c01 {
+  /********* ADD YOUR CODE  HERE **********/
+
+  
+  /********* END OF YOUR CODE **********/
+}
+.c01 div {
+  background-color: red;
+}
+
+/**
+CONTAINER C02
+**/
+.c02 {
+  /********* ADD YOUR CODE  HERE **********/
+
+  
+
+
+  /********* END OF YOUR CODE **********/
+}
+.c02 div {
+  background-color: orange;
+}
+
+/**
+CONTAINER C03
+**/
+.c03 {
+  /********* ADD YOUR CODE  HERE **********/
+
+  
+
+
+  /********* END OF YOUR CODE **********/
+}
+.c03 div {
+  background-color: green;
+}
+
+/**
+CONTAINER C04
+**/
+.c04 {
+  /********* ADD YOUR CODE  HERE **********/
+
+  
+
+  
+  /********* END OF YOUR CODE **********/
+}
+.c04 div {
+  background-color: blue;
+}
+
+/**
+CONTAINER C05
+**/
+.c05 div {
+  background-color: orangered;
+  padding: 20px 40px;
+  margin: 3px;
+}
+/********* ADD YOUR CODE  HERE **********/
+
+
+/********* END OF YOUR CODE **********/
+
+/**
+CONTAINER C06
+**/
+.c06 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c06 div {
+  padding: 20px 40px;
+  margin: 5px;
+}
+/********* ADD YOUR CODE  HERE **********/
+
+
+
+
+/********* END OF YOUR CODE **********/
+
+/**
+CONTAINER C07
+**/
+.c07 div {
+  background-color: cyan;
+  color: black;
+  padding: 20px 40px;
+  margin: 3px;
+}
+/********* ADD YOUR CODE  HERE **********/
+
+
+
+
+
+/********* END OF YOUR CODE **********/
+
+/**
+CONTAINER C08
+**/
+/********* ADD YOUR CODE  HERE **********/
+
+
+
+
+/********* END OF YOUR CODE **********/
+
+.c08 div {
+  background-color: purple;
+}
